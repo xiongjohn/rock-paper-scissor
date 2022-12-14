@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #24272e;
+}
+
+header {
+  background: white;
+  padding: 1.25px;
+  text-align: center;
+}
+
+main {
+  color: white;
+  text-align: center;
+}
+
+.score-board {
+  position: relative;
+  border: 3px solid white;
+  border-radius: 0.25rem;
+  margin: 1rem auto;
+  font-size: 3rem;
+  width: 12.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.badge {
+  background: #e25840;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.875rem;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+}
+
+#computer-label {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+.result p {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3.125rem 0 1.25rem;
+}
+
+.choice {
+  border: 0.25rem solid white;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  padding: 0.625rem;
+  margin: 0 1.25rem;
+  transition: all 200ms ease-in-out;
+}
+
+.choice:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#action-message {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
