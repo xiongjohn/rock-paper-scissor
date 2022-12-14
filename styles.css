@@ -52,10 +52,32 @@ main {
   font-weight: bold;
 }
 
+.result p::first-letter {
+  text-transform: capitalize;
+}
+
 .choices {
   display: flex;
   justify-content: space-evenly;
   margin: 3.125rem 0 1.25rem;
+}
+
+.choices ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.choices li:nth-child(1) {
+  position: absolute;
+  top: -1rem;
+  left: 15%;
+}
+
+.choices li:nth-child(3) {
+  position: absolute;
+  bottom: -1rem;
+  left: 25%;
 }
 
 .choice {
@@ -63,8 +85,9 @@ main {
   font-size: 3.5rem;
   border-radius: 50%;
   padding: 0.625rem;
-  margin: 0 1.25rem;
+  margin: 1.25rem;
   transition: all 200ms ease-in-out;
+  user-select: none;
 }
 
 .choice:hover {
@@ -72,7 +95,23 @@ main {
   opacity: 0.5;
 }
 
-#action-message {
+.action-message {
+  margin-top: 5rem;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+.border-green {
+  border: 0.25rem solid green;
+  box-shadow: 0 0 10px lightgreen;
+}
+
+.border-red {
+  border: 0.25rem solid red;
+  box-shadow: 0 0 10px orange;
+}
+
+.border-yellow {
+  border: 0.25rem solid yellow;
+  box-shadow: 0 0 10px white;
 }

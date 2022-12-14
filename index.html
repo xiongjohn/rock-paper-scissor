@@ -25,11 +25,34 @@
       <p>Paper covers rock. You win!</p>
     </div>
     <div class="choices">
-      <div class="choice">✊</div>
-      <div class="choice">✋</div>
-      <div class="choice">✌️</div>
+      <ul>
+        <li id="computer-picks-rock"></li>
+        <li>
+          <div class="choice" id="rock">✊</div>
+        </li>
+        <li id="user-picks-rock"></li>
+      </ul>
+      <ul>
+        <li id="computer-picks-paper"> </li>
+        <li>
+
+          <div class="choice" id="paper">✋</div>
+        </li>
+        <li id="user-picks-paper"></li>
+
+      </ul>
+      <ul>
+        <li id="computer-picks-scissor"></li>
+        <li>
+
+          <div class="choice" id="scissor">✌️</div>
+
+        </li>
+        <li id="user-picks-scissor"></li>
+
+      </ul>
     </div>
-    <p class="action-message">Make you move</p>
+    <p class="action-message">Make your move</p>
   </main>
 
   <script src="app.js"></script>
