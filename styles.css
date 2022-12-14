@@ -58,7 +58,7 @@ main {
 
 .choices {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 3.125rem 0 1.25rem;
 }
 
