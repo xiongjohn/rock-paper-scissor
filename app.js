@@ -13,6 +13,7 @@ const compPicksScissor = document.getElementById("computer-picks-scissor");
 const userPicksRock = document.getElementById("user-picks-rock");
 const userPicksPaper = document.getElementById("user-picks-paper");
 const userPicksScissor = document.getElementById("user-picks-scissor");
+const newGame = document.getElementById("new-game-button");
 
 function getComputerChoice() {
   const choices = [`rock`, `paper`, `scissor`];
@@ -108,6 +109,10 @@ function win(user, computer) {
   handleCompChoice(computer);
   handleUserChoice(user);
   changeBorderColor(user, computer);
+  userScoreSpan.classList.add("green-text");
+  setTimeout(() => {
+    userScoreSpan.classList.remove("green-text");
+  }, 500);
 }
 function lose(user, computer) {
   computerScore++;
@@ -117,6 +122,10 @@ function lose(user, computer) {
   handleCompChoice(computer);
   handleUserChoice(user);
   changeBorderColor(user, computer);
+  compScoreSpan.classList.add("red-text");
+  setTimeout(() => {
+    compScoreSpan.classList.remove("red-text");
+  }, 500);
 }
 function draw(user, computer) {
   result.innerHTML = `${user} equals ${computer}. It's a draw.`;
@@ -153,6 +162,20 @@ function handleClick(userChoice) {
   }
 }
 
+function handleNewGame(event) {
+  userScore = 0;
+  computerScore = 0;
+  userScoreSpan.innerHTML = userScore;
+  compScoreSpan.innerHTML = computerScore;
+  compPicksRock.innerHTML = " ";
+  compPicksPaper.innerHTML = " ";
+  compPicksScissor.innerHTML = " ";
+  userPicksRock.innerHTML = " ";
+  userPicksPaper.innerHTML = " ";
+  userPicksScissor.innerHTML = " ";
+  result.innerHTML = "Choose paper, rock, or scissor";
+  removeBorderColor();
+}
 function main() {
   rock.addEventListener("click", () => {
     handleClick("rock");
@@ -162,6 +185,9 @@ function main() {
   });
   scissor.addEventListener(`click`, () => {
     handleClick("scissor");
+  });
+  newGame.addEventListener("click", () => {
+    handleNewGame();
   });
 }
 

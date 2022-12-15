@@ -18,17 +18,17 @@
     <div class="score-board">
       <div class="badge" id="user-label">user</div>
       <div class="badge" id="computer-label">comp</div>
-      <span id="user-score">0</span>:
+      <span id="user-score">0</span> :
       <span id="computer-score">0</span>
     </div>
     <div class="result">
-      <p>Paper covers rock. You win!</p>
+      <p>Choose paper, rock, or scissor</p>
     </div>
     <div class="choices">
       <ul>
         <li id="computer-picks-rock"></li>
         <li>
-          <div class="choice" id="rock">✊</div>
+          <button class="choice" id="rock">✊</button>
         </li>
         <li id="user-picks-rock"></li>
       </ul>
@@ -36,7 +36,7 @@
         <li id="computer-picks-paper"> </li>
         <li>
 
-          <div class="choice" id="paper">✋</div>
+          <button class="choice" id="paper">✋</button>
         </li>
         <li id="user-picks-paper"></li>
 
@@ -45,7 +45,7 @@
         <li id="computer-picks-scissor"></li>
         <li>
 
-          <div class="choice" id="scissor">✌️</div>
+          <button class="choice" id="scissor">✌️</button>
 
         </li>
         <li id="user-picks-scissor"></li>
@@ -53,6 +53,8 @@
       </ul>
     </div>
     <p class="action-message">Make your move</p>
+
+    <button class="new-game" id="new-game-button">New Game</button>
   </main>
 
   <script src="app.js"></script>

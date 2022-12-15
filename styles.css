@@ -10,7 +10,7 @@ body {
 
 header {
   background: white;
-  padding: 1.25px;
+  padding: 5.25rem;
   text-align: center;
 }
 
@@ -38,13 +38,22 @@ main {
 #user-label {
   position: absolute;
   top: 30px;
-  left: -20px;
+  left: -30px;
+  border-radius: 0.125rem;
+  border: 3px solid white;
 }
 
 #computer-label {
   position: absolute;
   top: 30px;
-  right: -20px;
+  right: -40px;
+  border-radius: 0.125rem;
+  border: 3px solid white;
+}
+
+#user-score,
+#computer-score {
+  transition: all 500ms ease-out;
 }
 
 .result p {
@@ -88,11 +97,17 @@ main {
   margin: 1.25rem;
   transition: all 200ms ease-in-out;
   user-select: none;
+  background: #24272e;
 }
 
 .choice:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.choice:active {
+  transform: scale(0.75);
+  transition: transform 750ms;
 }
 
 .action-message {
@@ -101,17 +116,44 @@ main {
   font-weight: bold;
 }
 
+.new-game {
+  margin-top: 5rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all 50ms ease-in-out;
+}
+
+.new-game:hover {
+  cursor: pointer;
+}
+
+.new-game:active {
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
 .border-green {
   border: 0.25rem solid green;
-  box-shadow: 0 0 10px lightgreen;
+  box-shadow: 0 0 0.75rem lightgreen;
 }
 
 .border-red {
   border: 0.25rem solid red;
-  box-shadow: 0 0 10px orange;
+  box-shadow: 0 0 0.75rem orange;
 }
 
 .border-yellow {
   border: 0.25rem solid yellow;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 0.75rem white;
+}
+
+.green-text {
+  color: green;
+  text-shadow: 0 0 0.75rem lightgreen;
+}
+
+.red-text {
+  color: red;
+  text-shadow: 0 0 0.75rem orange;
 }
